@@ -1,0 +1,6 @@
+# git config --global core.excludesfile '~/.gitignore'
+# https://stackoverflow.com/a/7335487
+.vscode/
+.idea/
+*.iml
+*.swp

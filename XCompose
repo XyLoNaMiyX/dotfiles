@@ -1,0 +1,7 @@
+include "/usr/share/X11/locale/en_US.UTF-8/Compose"
+
+<Multi_key> <space> <space>      : "⁣" # INVISIBLE SEPARATOR
+<Multi_key> <o> <o>              : "•" # BULLET
+<Multi_key> <f> <a>              : "∀" # FOR ALL
+<Multi_key> <e> <x>              : "∃" # THERE EXISTS
+<Multi_key> <n> <e>              : "∄" # THERE DOES NOT EXIST
