@@ -1,7 +1,7 @@
 rm -f ~/.bashrc
 ln ./bashrc ~/.bashrc
 
-git config --global core.excludesfile './gitignore'
+git config --global core.excludesfile "$(pwd)/gitignore"
 
 rm -f ~/.config/nvim/init.vim
 mkdir -p ~/.config/nvim
