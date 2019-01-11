@@ -5,10 +5,10 @@ beep() {
 }
 
 if [[ -f /tmp/screenrecord.pid ]]; then
-	kill -INT $(cat "/tmp/screenrecord.pid")
-	rm /tmp/screenrecord.pid
+    kill -INT $(cat "/tmp/screenrecord.pid")
+    rm /tmp/screenrecord.pid
     beep
-	exit 0
+    exit 0
 fi
 
 read -r X Y W H < <(slop -f "%x %y %w %h" -q)
