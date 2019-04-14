@@ -26,12 +26,11 @@ alias gif2mp4="ffmpeg -i -vf format=yuv420p"
 alias copy="xclip -selection clipboard"
 alias paste="xclip -selection clipboard -out"
 
-alias rainbow=~/AppData/PrettyPrompt/rainbow
+alias rainbow=~/dotfiles/rainbow
 
 function getBranch { printf '@'; git status 2> /dev/null | head -n1 | sed 's/On branch //'; }
 function getPrompt { echo -e "\033[1;32m┌┤ $USER $(getBranch) $(rainbow $(pwd))\033[0m\n└─"; }
 PS1='$(getPrompt) '
 
 alias bench=hyperfine
-alias find=fd
-alias ls=lsd
+
