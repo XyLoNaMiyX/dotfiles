@@ -12,3 +12,10 @@ ln ./init.vim ~/.config/nvim/
 rm -f ~/.XCompose
 ln ./XCompose ~/.XCompose
 
+mkdir -p $APPS_DIR
+cd $APPS_DIR
+if [ ! -f mc ]; then
+    wget https://raw.githubusercontent.com/LonamiWebs/Py-Utils/master/mineutils/mc
+    chmod +x mc
+fi
+
