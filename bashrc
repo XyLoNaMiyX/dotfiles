@@ -38,7 +38,10 @@ alias python="python3"
 alias pipi="pip3 install --user"
 alias pipr="pip3 uninstall"
 alias music="mpv --no-video --shuffle"
+alias term="xfce4-terminal"
 
 # desktop files for the whiskers' menu go in ~/.local/share/applications/
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+. ~/.nix-profile/etc/profile.d/nix.sh
