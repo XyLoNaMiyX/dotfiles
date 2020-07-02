@@ -12,7 +12,9 @@ PID_FILE="/tmp/screenrecord.pid"
 PATH_FILE="/tmp/screenrecord.fle"
 
 if [[ -f $PID_FILE ]]; then
-    killall screenkey
+    if (( $1 == "screenkey" )); then
+        killall screenkey
+    fi
     kill -INT "$(cat $PID_FILE)"
     xclip -se c -t video/mp4 "$(cat $PATH_FILE)"
     rm $PID_FILE $PATH_FILE
@@ -35,7 +37,9 @@ beep
 DATE=$(date '+%Y-%m-%d_%H-%M-%S')
 FILE="$HOME/Desktop/sr-$DATE.mp4"
 
-screenkey -g${W}x$H+$X+$Y
+if (( $1 == "screenkey" )); then
+    screenkey -g${W}x$H+$X+$Y
+fi
 
 ffmpeg \
     -video_size ${W}x$H \

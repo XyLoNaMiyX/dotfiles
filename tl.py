@@ -3,7 +3,9 @@ import sys
 import time
 import logging
 import asyncio
+from datetime import date, datetime
 logging.basicConfig(level=logging.INFO)
+import telethon
 from telethon import TelegramClient, sync, events, Button, functions, types, utils
 _path = os.path.expanduser('~/dotfiles/')
 
@@ -23,3 +25,4 @@ c = cl = client = bot = TelegramClient(
     flood_sleep_threshold=0
 ).start()
 me = cl.get_me()
+print(f'Running Telethon v{telethon.__version__}')
